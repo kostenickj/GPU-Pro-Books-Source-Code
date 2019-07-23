@@ -13,7 +13,7 @@
 //--------------------------------------------------------------------------------------
 
 #include "pchfx.h"
-#include "SOParser.h"
+#include "Binary/SOParser.h"
 
 namespace D3DX11Effects
 {

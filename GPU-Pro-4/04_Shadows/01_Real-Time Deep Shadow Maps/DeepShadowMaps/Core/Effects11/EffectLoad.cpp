@@ -11,7 +11,7 @@
 
 #include "pchfx.h"
 
-#include "EffectStates11.h"
+#include "Binary/EffectStates11.h"
 
 #define PRIVATENEW new(m_BulkHeap)
 

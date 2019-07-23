@@ -16,7 +16,7 @@
 
 #ifdef _DEBUG
 extern void __cdecl D3DXDebugPrintf(UINT lvl, _In_z_ _Printf_format_string_ LPCSTR szFormat, ...);
-#define DPF D3DXDebugPrintf
+#define DPF //D3DXDebugPrintf
 #else
 #define DPF
 #endif

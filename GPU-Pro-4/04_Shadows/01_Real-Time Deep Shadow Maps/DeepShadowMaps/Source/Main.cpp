@@ -465,14 +465,14 @@ void Main::render(float timeSinceLastFrame, float timeRunning)
 	core->SetRenderTargets(4, deferedRenderTargets, core->GetDepthStencilView());
 	dsm->SetShaderForRealRendering(hairEffects[currentEffect].hairEffectDimension, hairEffects[currentEffect].hairEffectLinkedListBufWPRO, hairEffects[currentEffect].hairEffectNeighborsBufRO, hairEffects[currentEffect].hairEffectStartElementBuf);
 	hairModel->SetMaterial(hairEffects[currentEffect].hairEffectColor, hairEffects[currentEffect].hairEffectTexture);
-	hairEffects[currentEffect].hairRenderDeferedTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext(), true);
+	hairEffects[currentEffect].hairRenderDeferedTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext()/*, true*/);
 	hairModel->Draw();
 
 	core->GetImmediateDeviceContext()->IASetInputLayout(hairEffects[currentEffect].headInputLayout);
 	for(int model = 0; model < numHeadModels; model++)
 	{
 		headModels[model]->SetMaterial(hairEffects[currentEffect].hairEffectColor, hairEffects[currentEffect].hairEffectTexture);
-		hairEffects[currentEffect].hairRenderDeferedModelTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext(), true);
+		hairEffects[currentEffect].hairRenderDeferedModelTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext()/*, true*/);
 		headModels[model]->Draw();
 	}
 
@@ -489,14 +489,14 @@ void Main::render(float timeSinceLastFrame, float timeRunning)
 	hairEffects[currentEffect].hairEffectDeferedNormal->SetResource(deferedNormalSRV);
 	hairEffects[currentEffect].hairEffectDeferedColor->SetResource(deferedTempColorSRV);
 
-	hairEffects[currentEffect].hairRenderTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext(), true);
+	hairEffects[currentEffect].hairRenderTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext()/*, true*/);
 	core->GetImmediateDeviceContext()->Draw(4, 0);
 
 	// AA Pass
 	core->SetDefaultRenderTarget();
 	hairEffects[currentEffect].hairEffectDeferedColor->SetResource(deferedColorSRV);
 	
-	hairEffects[currentEffect].hairRenderAATechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext(), true);
+	hairEffects[currentEffect].hairRenderAATechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext()/*, true*/);
 	core->GetImmediateDeviceContext()->Draw(4, 0);
 
 	// unset resources to avoid debug output
@@ -506,7 +506,7 @@ void Main::render(float timeSinceLastFrame, float timeRunning)
 	hairEffects[currentEffect].hairEffectDeferedNormal->SetResource(NULL);
 
 	dsm->UnsetShaderForRealRendering(hairEffects[currentEffect].hairEffectDimension, hairEffects[currentEffect].hairEffectLinkedListBufWPRO, hairEffects[currentEffect].hairEffectNeighborsBufRO, hairEffects[currentEffect].hairEffectStartElementBuf);
-	hairEffects[currentEffect].hairRenderTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext(), true);
+	hairEffects[currentEffect].hairRenderTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext()/*, true*/);
 
 	guiDialog.OnRender(timeSinceLastFrame);
 }

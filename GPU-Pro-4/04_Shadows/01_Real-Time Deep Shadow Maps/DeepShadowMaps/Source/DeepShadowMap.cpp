@@ -256,19 +256,19 @@ void DeepShadowMap::Set(CoreCamera &lightCam, CoreMatrix4x4 &world, float alpha,
 	dsmEffects[currentEffect].dsmEffectStartElementBuf->SetUnorderedAccessView(startElementBufUAV);
 	dsmEffects[currentEffect].dsmEffectAlpha->SetFloat(alpha);
 
-	dsmEffects[currentEffect].dsmRenderTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext(), true);
+	dsmEffects[currentEffect].dsmRenderTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext()/*, true*/);
 }
 
 void DeepShadowMap::ChangeAlpha(float alpha, int currentEffect)
 {
 	dsmEffects[currentEffect].dsmEffectAlpha->SetFloat(alpha);
-	dsmEffects[currentEffect].dsmRenderTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext(), false);
+	dsmEffects[currentEffect].dsmRenderTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext()/*, true*/);
 }
 
 void DeepShadowMap::ChangeLightCamera(CoreCamera &lightCam, CoreMatrix4x4 &world, int currentEffect)
 {
 	lightCam.WorldViewProjectionToEffectVariable(dsmEffects[currentEffect].dsmEffectWorldViewProj, world);
-	dsmEffects[currentEffect].dsmRenderTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext(), false);
+	dsmEffects[currentEffect].dsmRenderTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext()/*, true*/);
 }
 
 void DeepShadowMap::Unset(int currentEffect)
@@ -299,7 +299,7 @@ void DeepShadowMap::SortLists(int currentEffect)
 	dsmEffects[currentEffect].dsmEffectStartElementBufRO->SetResource(startElementBufSRV);
 	dsmEffects[currentEffect].dsmEffectLinkedListBufDANRO->SetResource(linkedListBufSRV);
 	dsmEffects[currentEffect].dsmEffectDimension->SetInt((int)vp.Width);
-	dsmEffects[currentEffect].dsmSortTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext(), true);
+	dsmEffects[currentEffect].dsmSortTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext()/*, true*/);
 	int resx = (int)vp.Width / 16;
 	if((int)vp.Width % 16 > 0)
 		resx++;
@@ -310,7 +310,7 @@ void DeepShadowMap::SortLists(int currentEffect)
 	dsmEffects[currentEffect].dsmEffectLinkedListBufWP->SetUnorderedAccessView(NULL);
 	dsmEffects[currentEffect].dsmEffectStartElementBufRO->SetResource(NULL);
 	dsmEffects[currentEffect].dsmEffectLinkedListBufDANRO->SetResource(NULL);
-	dsmEffects[currentEffect].dsmSortTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext(), true);
+	dsmEffects[currentEffect].dsmSortTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext()/*, true*/);
 }
 
 void DeepShadowMap::LinkLists(int currentEffect)
@@ -319,7 +319,7 @@ void DeepShadowMap::LinkLists(int currentEffect)
 	dsmEffects[currentEffect].dsmEffectLinkedListBufWPRO->SetResource(linkedListBuf2SRV);
 	dsmEffects[currentEffect].dsmEffectStartElementBufRO->SetResource(startElementBufSRV);
 	dsmEffects[currentEffect].dsmEffectDimension->SetInt((int)vp.Width);
-	dsmEffects[currentEffect].dsmLinkTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext(), true);
+	dsmEffects[currentEffect].dsmLinkTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext()/*, true*/);
 	int resx = (int)vp.Width / 16;
 	if((int)vp.Width % 16 > 0)
 		resx++;
@@ -330,5 +330,5 @@ void DeepShadowMap::LinkLists(int currentEffect)
 	dsmEffects[currentEffect].dsmEffectNeighborsBuf->SetUnorderedAccessView(NULL);
 	dsmEffects[currentEffect].dsmEffectStartElementBufRO->SetResource(NULL);
 	dsmEffects[currentEffect].dsmEffectLinkedListBufWPRO->SetResource(NULL);
-	dsmEffects[currentEffect].dsmLinkTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext(), true);
+	dsmEffects[currentEffect].dsmLinkTechnique->GetPassByIndex(0)->Apply(0, core->GetImmediateDeviceContext()/*, true*/);
 }

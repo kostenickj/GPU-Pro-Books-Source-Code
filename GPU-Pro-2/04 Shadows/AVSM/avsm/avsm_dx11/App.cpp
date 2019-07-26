@@ -22,6 +22,7 @@
 #include <iostream>
 #include <limits>
 #include <sstream>
+#include <algorithm>
 
 using std::tr1::shared_ptr;
 
@@ -2133,7 +2134,7 @@ void App::CreatePixelShadersFromCompiledObjs(ID3D11Device* d3dDevice,
             std::string objName = std::string(prefix) + 
                                   std::string(cNodeCount) + 
                                   std::string(suffix);
-            std::wstring objWName(objName.length(), L'');
+            std::wstring objWName(objName.length(), L'\0');
             std::copy(objName.begin(), objName.end(), objWName.begin());
             CreatePixelShaderFromCompiledObj(d3dDevice,
                                             (LPCTSTR)objWName.c_str(),

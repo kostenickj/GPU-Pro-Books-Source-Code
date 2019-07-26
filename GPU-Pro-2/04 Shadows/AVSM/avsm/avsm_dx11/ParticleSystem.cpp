@@ -16,7 +16,7 @@
 #include "App.H"
 #include "ParticleSystem.h"
 #include "Camera.h"
-
+#include <algorithm>
 #include <limits>
 
 D3DXMATRIX gLightViewProjection;

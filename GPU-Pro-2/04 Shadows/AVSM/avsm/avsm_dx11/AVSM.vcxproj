@@ -221,7 +221,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <!-- <CustomBuild Include="AVSM.hlsl">
+    <CustomBuild Include="AVSM.hlsl">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E VisualizeListTexFirstNodeOffsetPS  /Fo "%(RootDir)%(Directory)ShaderObjs/VisualizeListTexFirstNodeOffsetPS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E VisualizeAVSMPS  /Fo "%(RootDir)%(Directory)ShaderObjs/VisualizeAVSMPS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 </Command>
@@ -253,7 +253,7 @@
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMInsertionSortResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM12InsertionSortResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=12  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMInsertionSortResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM16InsertionSortResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=16  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 </Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)AVSM.hlsl %(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)AVSM.hlsl;%(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)ShaderObjs/AVSM4UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM8UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM12UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM16UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM4InsertionSortResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM8InsertionSortResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM12InsertionSortResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM16InsertionSortResolvePS.fxo;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMUnsortedResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM4UnsortedResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=4  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMUnsortedResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM8UnsortedResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
@@ -264,7 +264,7 @@
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMInsertionSortResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM12InsertionSortResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=12  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMInsertionSortResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM16InsertionSortResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=16  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 </Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RootDir)%(Directory)AVSM.hlsl %(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RootDir)%(Directory)AVSM.hlsl;%(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RootDir)%(Directory)ShaderObjs/AVSM4UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM8UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM12UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM16UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM4InsertionSortResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM8InsertionSortResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM12InsertionSortResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM16InsertionSortResolvePS.fxo;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMUnsortedResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM4UnsortedResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=4  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMUnsortedResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM8UnsortedResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
@@ -275,7 +275,7 @@
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMInsertionSortResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM12InsertionSortResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=12  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMInsertionSortResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM16InsertionSortResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=16  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 </Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)AVSM.hlsl %(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)AVSM.hlsl;%(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)ShaderObjs/AVSM4UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM8UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM12UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM16UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM4InsertionSortResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM8InsertionSortResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM12InsertionSortResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM16InsertionSortResolvePS.fxo;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMUnsortedResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM4UnsortedResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=4  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMUnsortedResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM8UnsortedResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
@@ -286,7 +286,7 @@
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMInsertionSortResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM12InsertionSortResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=12  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E AVSMInsertionSortResolvePS  /Fo "%(RootDir)%(Directory)ShaderObjs/AVSM16InsertionSortResolvePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=16  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 </Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)AVSM.hlsl %(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)AVSM.hlsl;%(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)ShaderObjs/AVSM4UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM8UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM12UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM16UnsortedResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM4InsertionSortResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM8InsertionSortResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM12InsertionSortResolvePS.fxo;%(RootDir)%(Directory)ShaderObjs/AVSM16InsertionSortResolvePS.fxo;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="CameraHairCapture.hlsl">
@@ -335,8 +335,8 @@
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)AVSM.hlsl;%(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)ShaderObjs/CameraHairRenderPS.fxo;%(Outputs)</Outputs>
     </CustomBuild>
-    <FxCompile Include="Common.hlsl" />
-    <FxCompile Include="ConstantBuffers.hlsl" />
+    <!-- <FxCompile Include="Common.hlsl" />
+    <FxCompile Include="ConstantBuffers.hlsl" /> -->
     <CustomBuild Include="DrawTransmittance.hlsl">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T vs_5_0 /E DrawTransmittanceVS  /Fo "%(RootDir)%(Directory)ShaderObjs/DrawTransmittanceVS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E DrawTransmittancePS  /Fo "%(RootDir)%(Directory)ShaderObjs/DrawTransmittancePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
@@ -355,7 +355,7 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)ShaderObjs/DrawTransmittanceVS.fxo;%(RootDir)%(Directory)ShaderObjs/DrawTransmittancePS.fxo;%(Outputs)</Outputs>
     </CustomBuild>
-    <FxCompile Include="GBuffer.hlsl" />
+    <!-- <FxCompile Include="GBuffer.hlsl" /> -->
     <CustomBuild Include="HairCommon.hlsl">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T vs_5_0 /E HairVS  /Fo "%(RootDir)%(Directory)ShaderObjs/HairVS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T gs_5_0 /E HairGS  /Fo "%(RootDir)%(Directory)ShaderObjs/HairGS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
@@ -377,8 +377,8 @@
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">GBuffer.hlsl;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)ShaderObjs/HairVS.fxo;%(RootDir)%(Directory)ShaderObjs/HairGS.fxo;%(Outputs)</Outputs>
     </CustomBuild>
-    <FxCompile Include="HairListTexture.hlsl" />
-    <FxCompile Include="ListTexture.hlsl" />
+    <!-- <FxCompile Include="HairListTexture.hlsl" /> -->
+    <!-- <FxCompile Include="ListTexture.hlsl" /> -->
     <CustomBuild Include="Particle.hlsl">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T vs_5_0 /E DynamicParticlesShading_VS /Fo "%(RootDir)%(Directory)ShaderObjs/DynamicParticlesShadingVS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=4  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 "$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E DynamicParticlesShading_PS /Fo "%(RootDir)%(Directory)ShaderObjs/DynamicParticlesShading4PS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=4  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
@@ -498,19 +498,19 @@
     <CustomBuild Include="ShadowHairCapture.hlsl">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E ShadowHairCapturePS  /Fo "%(RootDir)%(Directory)ShaderObjs/ShadowHairCapturePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)
 </Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)AVSM.hlsl %(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)AVSM.hlsl;%(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)ShaderObjs/ShadowHairCapturePS.fxo;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E ShadowHairCapturePS  /Fo "%(RootDir)%(Directory)ShaderObjs/ShadowHairCapturePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)
 </Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RootDir)%(Directory)AVSM.hlsl %(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RootDir)%(Directory)AVSM.hlsl;%(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RootDir)%(Directory)ShaderObjs/ShadowHairCapturePS.fxo;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E ShadowHairCapturePS  /Fo "%(RootDir)%(Directory)ShaderObjs/ShadowHairCapturePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)
 </Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)AVSM.hlsl %(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)AVSM.hlsl;%(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)ShaderObjs/ShadowHairCapturePS.fxo;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T ps_5_0 /E ShadowHairCapturePS  /Fo "%(RootDir)%(Directory)ShaderObjs/ShadowHairCapturePS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)
 </Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)AVSM.hlsl %(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)AVSM.hlsl;%(RootDir)%(Directory)AVSM_def.h;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)ShaderObjs/ShadowHairCapturePS.fxo;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="StandardCameraHairRender.hlsl">
@@ -556,7 +556,7 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(DXSDK_DIR)Utilities\bin\x86\fxc.exe" /T cs_5_0 /E ComputeVisibilityCurveCS  /Fo "%(RootDir)%(Directory)ShaderObjs/ComputeVisibilityCurveCS.fxo" /D SHADOWAA_SAMPLES=4 /D AVSM_NODE_COUNT=8  /Ges /Zpr  "%(RootDir)%(Directory)%(Filename)%(Extension)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)ShaderObjs/ComputeVisibilityCurveCS.fxo;%(Outputs)</Outputs>
-    </CustomBuild> -->
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
